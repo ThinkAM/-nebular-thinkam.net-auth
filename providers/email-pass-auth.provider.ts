@@ -130,7 +130,7 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
       endpoint: '/api/user',
       method: 'post',
       redirect: {
-        success: '/',
+        success: 'http://thinkam.net/beta',
         failure: null,
       },
       defaultErrors: ['Alguma coisa deu errado. Por favor tente outra vez.'],
