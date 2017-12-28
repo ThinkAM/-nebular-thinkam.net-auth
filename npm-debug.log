@@ -1,0 +1,131 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\felipe.almeida\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@4.1.2
+3 info using node@v6.12.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'C:\\thinkam\\nebular\\src\\framework\\auth',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\felipe.almeida\AppData\Roaming\npm-cache\@nebular-thinkam.net\auth\2.0.0-rc.3\package.tgz not in flight; packing
+9 verbose correctMkdir C:\Users\felipe.almeida\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+10 info lifecycle @nebular-thinkam.net/auth@2.0.0-rc.3~prepublish: @nebular-thinkam.net/auth@2.0.0-rc.3
+11 silly lifecycle @nebular-thinkam.net/auth@2.0.0-rc.3~prepublish: no script for prepublish, continuing
+12 info lifecycle @nebular-thinkam.net/auth@2.0.0-rc.3~prepare: @nebular-thinkam.net/auth@2.0.0-rc.3
+13 silly lifecycle @nebular-thinkam.net/auth@2.0.0-rc.3~prepare: no script for prepare, continuing
+14 verbose tar pack [ 'C:\\Users\\felipe.almeida\\AppData\\Roaming\\npm-cache\\@nebular-thinkam.net\\auth\\2.0.0-rc.3\\package.tgz',
+14 verbose tar pack   'C:\\thinkam\\nebular\\src\\framework\\auth' ]
+15 verbose tarball C:\Users\felipe.almeida\AppData\Roaming\npm-cache\@nebular-thinkam.net\auth\2.0.0-rc.3\package.tgz
+16 verbose folder C:\thinkam\nebular\src\framework\auth
+17 verbose addLocalTarball adding from inside cache C:\Users\felipe.almeida\AppData\Roaming\npm-cache\@nebular-thinkam.net\auth\2.0.0-rc.3\package.tgz
+18 verbose correctMkdir C:\Users\felipe.almeida\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+19 silly cache afterAdd @nebular-thinkam.net/auth@2.0.0-rc.3
+20 verbose afterAdd C:\Users\felipe.almeida\AppData\Roaming\npm-cache\@nebular-thinkam.net\auth\2.0.0-rc.3\package\package.json not in flight; writing
+21 verbose correctMkdir C:\Users\felipe.almeida\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+22 verbose afterAdd C:\Users\felipe.almeida\AppData\Roaming\npm-cache\@nebular-thinkam.net\auth\2.0.0-rc.3\package\package.json written
+23 silly publish { name: '@nebular-thinkam.net/auth',
+23 silly publish   version: '2.0.0-rc.3',
+23 silly publish   description: '@nebular-thinkam.net/auth',
+23 silly publish   main: './bundles/auth.umd.js',
+23 silly publish   module: './index.js',
+23 silly publish   typings: './index.d.ts',
+23 silly publish   author: { name: 'Think A.M. Team' },
+23 silly publish   license: 'MIT',
+23 silly publish   repository:
+23 silly publish    { type: 'git',
+23 silly publish      url: 'git+https://github.com/ThinkAM/nebular.git' },
+23 silly publish   bugs: { url: 'https://github.com/ThinkAM/nebular/issues' },
+23 silly publish   homepage: 'https://github.com/ThinkAM/nebular#readme',
+23 silly publish   keywords:
+23 silly publish    [ 'angular',
+23 silly publish      'typescript',
+23 silly publish      'ng2-admin',
+23 silly publish      'ngx-admin',
+23 silly publish      'theme',
+23 silly publish      'auth',
+23 silly publish      'login',
+23 silly publish      'register',
+23 silly publish      'nebular' ],
+23 silly publish   peerDependencies:
+23 silly publish    { '@angular/common': '^4.0.0',
+23 silly publish      '@angular/core': '^4.0.0',
+23 silly publish      '@angular/router': '^4.0.0',
+23 silly publish      '@angular/forms': '^4.0.0',
+23 silly publish      '@angular/http': '^4.0.0',
+23 silly publish      '@nebular/theme': '2.0.0-rc.3' },
+23 silly publish   readme: '### @nebular/auth module, more details https://akveo.github.io/nebular/\r\n',
+23 silly publish   readmeFilename: 'README.md',
+23 silly publish   _id: '@nebular-thinkam.net/auth@2.0.0-rc.3',
+23 silly publish   scripts: {},
+23 silly publish   _shasum: '89077c597f9e7a8d10f363782ca162fd07e700d3',
+23 silly publish   _from: '.' }
+24 info lifecycle @nebular-thinkam.net/auth@2.0.0-rc.3~prepublishOnly: @nebular-thinkam.net/auth@2.0.0-rc.3
+25 silly lifecycle @nebular-thinkam.net/auth@2.0.0-rc.3~prepublishOnly: no script for prepublishOnly, continuing
+26 verbose getPublishConfig undefined
+27 silly mapToRegistry name @nebular-thinkam.net/auth
+28 silly mapToRegistry scope (from package name) @nebular-thinkam.net
+29 verbose mapToRegistry no registry URL found in name for scope @nebular-thinkam.net
+30 silly mapToRegistry using default registry
+31 silly mapToRegistry registry https://registry.npmjs.org/
+32 silly mapToRegistry data Result {
+32 silly mapToRegistry   raw: '@nebular-thinkam.net/auth',
+32 silly mapToRegistry   scope: '@nebular-thinkam.net',
+32 silly mapToRegistry   escapedName: '@nebular-thinkam.net%2fauth',
+32 silly mapToRegistry   name: '@nebular-thinkam.net/auth',
+32 silly mapToRegistry   rawSpec: '',
+32 silly mapToRegistry   spec: 'latest',
+32 silly mapToRegistry   type: 'tag' }
+33 silly mapToRegistry uri https://registry.npmjs.org/@nebular-thinkam.net%2fauth
+34 verbose publish registryBase https://registry.npmjs.org/
+35 silly publish uploading C:\Users\felipe.almeida\AppData\Roaming\npm-cache\@nebular-thinkam.net\auth\2.0.0-rc.3\package.tgz
+36 verbose request uri https://registry.npmjs.org/@nebular-thinkam.net%2fauth
+37 verbose request sending authorization for write operation
+38 info attempt registry request try #1 at 17:28:14
+39 verbose request using bearer token for auth
+40 verbose request id 4b29b07df2f82143
+41 http request PUT https://registry.npmjs.org/@nebular-thinkam.net%2fauth
+42 http 402 https://registry.npmjs.org/@nebular-thinkam.net%2fauth
+43 verbose headers { 'content-type': 'application/json',
+43 verbose headers   'cache-control': 'max-age=0',
+43 verbose headers   'content-length': '49',
+43 verbose headers   'accept-ranges': 'bytes',
+43 verbose headers   date: 'Thu, 28 Dec 2017 19:28:15 GMT',
+43 verbose headers   via: '1.1 varnish',
+43 verbose headers   connection: 'keep-alive',
+43 verbose headers   'x-served-by': 'cache-gru17130-GRU',
+43 verbose headers   'x-cache': 'MISS',
+43 verbose headers   'x-cache-hits': '0',
+43 verbose headers   'x-timer': 'S1514489294.215433,VS0,VE947' }
+44 verbose request invalidating C:\Users\felipe.almeida\AppData\Roaming\npm-cache\registry.npmjs.org\_40nebular-thinkam.net_252fauth on PUT
+45 error publish Failed PUT 402
+46 verbose stack Error: You must sign up for private packages : @nebular-thinkam.net/auth
+46 verbose stack     at makeError (C:\Users\felipe.almeida\AppData\Roaming\npm\node_modules\npm\node_modules\npm-registry-client\lib\request.js:304:12)
+46 verbose stack     at CachingRegistryClient.<anonymous> (C:\Users\felipe.almeida\AppData\Roaming\npm\node_modules\npm\node_modules\npm-registry-client\lib\request.js:292:14)
+46 verbose stack     at Request._callback (C:\Users\felipe.almeida\AppData\Roaming\npm\node_modules\npm\node_modules\npm-registry-client\lib\request.js:212:14)
+46 verbose stack     at Request.self.callback (C:\Users\felipe.almeida\AppData\Roaming\npm\node_modules\npm\node_modules\request\request.js:186:22)
+46 verbose stack     at emitTwo (events.js:106:13)
+46 verbose stack     at Request.emit (events.js:191:7)
+46 verbose stack     at Request.<anonymous> (C:\Users\felipe.almeida\AppData\Roaming\npm\node_modules\npm\node_modules\request\request.js:1081:10)
+46 verbose stack     at emitOne (events.js:96:13)
+46 verbose stack     at Request.emit (events.js:188:7)
+46 verbose stack     at IncomingMessage.<anonymous> (C:\Users\felipe.almeida\AppData\Roaming\npm\node_modules\npm\node_modules\request\request.js:1001:12)
+47 verbose statusCode 402
+48 verbose pkgid @nebular-thinkam.net/auth
+49 verbose cwd C:\thinkam\nebular\src\framework\auth
+50 error Windows_NT 10.0.16299
+51 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\felipe.almeida\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+52 error node v6.12.2
+53 error npm  v4.1.2
+54 error code E402
+55 error You must sign up for private packages : @nebular-thinkam.net/auth
+56 error If you need help, you may report this error at:
+56 error     <https://github.com/npm/npm/issues>
+57 verbose exit [ 1, true ]
