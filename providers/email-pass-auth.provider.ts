@@ -240,14 +240,8 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
 
         return res;
       })
-      .map((res) => {
-        return new NbAuthResult(
-          true,
-          res,
-          this.getConfigValue('register.redirect.success'),
-          [],
-          this.getConfigValue('messages.getter')('register', res),
-          this.getConfigValue('token.getter')('register', res));
+      .map((res: HttpResponse<NbAuthResult>) => {
+        return res.body;
       })
       .catch((res) => {
         let errors = [];
