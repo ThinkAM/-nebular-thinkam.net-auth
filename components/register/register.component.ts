@@ -151,11 +151,7 @@ export class NbRegisterComponent {
     this.errors = this.messages = [];
     this.submitted = true;
 
-
-    this.webApi.register(this.user).subscribe((res: NbAuthResult) => {
-      console.log(res);
-
-      this.service.register(this.provider, this.user).subscribe((result: NbAuthResult) => {
+    this.webApi.register(this.user).subscribe((result: NbAuthResult) => {      
         this.submitted = false;
         if (result.isSuccess()) {
           this.messages = result.getMessages();
@@ -171,8 +167,7 @@ export class NbRegisterComponent {
             else 
               return location.replace(redirect);
           }, this.redirectDelay);
-        }
-      });        
+        }      
     });
   }
 
