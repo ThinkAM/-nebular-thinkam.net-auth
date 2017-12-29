@@ -9,10 +9,10 @@ export abstract class NbAbstractAuthProvider {
   protected defaultConfig: any = {};
   protected config: any = {
     register : {
-      method: "user",
-      endpoint: "api/"
+      method: "POST",
+      endpoint: "/api/user"
     },
-    baseEndpoint: "http://thinkam.azurewebsites.net/"
+    baseEndpoint: "http://thinkam.azurewebsites.net"
   };
 
   setConfig(config: any): void {
