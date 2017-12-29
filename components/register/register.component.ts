@@ -160,7 +160,8 @@ export class NbRegisterComponent {
         }
   
         const redirect = result.getRedirect();
-        if (redirect) {
+        
+        if (result.isSuccess()) {
           setTimeout(() => {
             if (redirect.indexOf("http://") === -1)
               return this.router.navigateByUrl(redirect);
