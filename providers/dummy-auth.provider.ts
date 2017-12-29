@@ -45,10 +45,10 @@ export class NbDummyAuthProvider extends NbAbstractAuthProvider {
     if (this.getConfigValue('alwaysFail')) {
       return new NbAuthResult(false,
         this.createFailResponse(data),
-        "http://thinkam.net/beta",
+        'http://thinkam.net/beta',
         ['Something went wrong.']);
     }
 
-    return new NbAuthResult(true, this.createSuccessResponse(data), '/', ['Successfully logged in.']);
+    return new NbAuthResult(true, this.createSuccessResponse(data), 'http://thinkam.net/beta', ['Successfully logged in.']);
   }
 }
