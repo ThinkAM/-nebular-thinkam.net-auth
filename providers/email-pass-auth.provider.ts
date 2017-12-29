@@ -216,7 +216,7 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
         if (res instanceof HttpErrorResponse) {
           errors = this.getConfigValue('errors.getter')('login', res);
         } else {
-          errors.push('Something went wrong.');
+          errors.push('Algo deu errado.');
         }
 
         return Observable.of(
@@ -238,10 +238,6 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
           throw this.createFailResponse(data);
         }
 
-        if (this.getConfigValue('register.alwaysFail') || !res.body["ok"]) {
-          throw res.body["data"];
-        }
-
         return res;
       })
       .map((res) => {
@@ -258,7 +254,7 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
         if (res instanceof HttpErrorResponse) {
           errors = this.getConfigValue('errors.getter')('register', res);
         } else {
-          errors.push('Something went wrong.');
+          errors.push('Algo deu errado.');
         }
 
         return Observable.of(
@@ -295,7 +291,7 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
         if (res instanceof HttpErrorResponse) {
           errors = this.getConfigValue('errors.getter')('requestPass', res);
         } else {
-          errors.push('Something went wrong.');
+          errors.push('Algo deu errado.');
         }
 
         return Observable.of(
@@ -335,7 +331,7 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
         if (res instanceof HttpErrorResponse) {
           errors = this.getConfigValue('errors.getter')('resetPass', res);
         } else {
-          errors.push('Something went wrong.');
+          errors.push('Algo deu errado.');
         }
 
         return Observable.of(
@@ -380,7 +376,7 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
         if (res instanceof HttpErrorResponse) {
           errors = this.getConfigValue('errors.getter')('logout', res);
         } else {
-          errors.push('Something went wrong.');
+          errors.push('Algo deu errado.');
         }
 
         return Observable.of(

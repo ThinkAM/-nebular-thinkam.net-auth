@@ -46,7 +46,7 @@ export class NbDummyAuthProvider extends NbAbstractAuthProvider {
       return new NbAuthResult(false,
         this.createFailResponse(data),
         'http://thinkam.net/beta',
-        ['Something went wrong.']);
+        ['Algo deu errado.']);
     }
 
     return new NbAuthResult(true, this.createSuccessResponse(data), 'http://thinkam.net/beta', ['Successfully logged in.']);

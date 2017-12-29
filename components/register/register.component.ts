@@ -21,12 +21,12 @@ import { NbEmailPassAuthProvider } from '../../providers/email-pass-auth.provide
 
         <div *ngIf="showMessages.error && errors && errors.length > 0 && !submitted"
              class="alert alert-danger" role="alert">
-          <div><strong>Oh snap!</strong></div>
+          <div><strong>Oh não!</strong></div>
           <div *ngFor="let error of errors">{{ error }}</div>
         </div>
         <div *ngIf="showMessages.success && messages && messages.length > 0 && !submitted"
              class="alert alert-success" role="alert">
-          <div><strong>Hooray!</strong></div>
+          <div><strong>Uhuuul!</strong></div>
           <div *ngFor="let message of messages">{{ message }}</div>
         </div>
 
