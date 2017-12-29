@@ -9,6 +9,7 @@ import { NB_AUTH_OPTIONS_TOKEN } from '../../auth.options';
 import { getDeepFromObject } from '../../helpers';
 
 import { NbAuthResult, NbAuthService } from '../../services/auth.service';
+import { NbEmailPassAuthProvider } from '../../providers/email-pass-auth.provider';
 
 @Component({
   selector: 'nb-register',
@@ -138,6 +139,7 @@ export class NbRegisterComponent {
 
   constructor(protected service: NbAuthService,
               @Inject(NB_AUTH_OPTIONS_TOKEN) protected config = {},
+              protected webApi: NbEmailPassAuthProvider,
               protected router: Router) {
 
     this.redirectDelay = this.getConfigValue('forms.register.redirectDelay');
@@ -149,23 +151,28 @@ export class NbRegisterComponent {
     this.errors = this.messages = [];
     this.submitted = true;
 
-    this.service.register(this.provider, this.user).subscribe((result: NbAuthResult) => {
-      this.submitted = false;
-      if (result.isSuccess()) {
-        this.messages = result.getMessages();
-      } else {
-        this.errors = result.getErrors();
-      }
 
-      const redirect = result.getRedirect();
-      if (redirect) {
-        setTimeout(() => {
-          if (redirect.indexOf("http://") === -1)
-            return this.router.navigateByUrl(redirect);
-          else 
-            return location.replace(redirect);
-        }, this.redirectDelay);
-      }
+    this.webApi.register(this.user).subscribe((res: NbAuthResult) => {
+      console.log(res);
+
+      this.service.register(this.provider, this.user).subscribe((result: NbAuthResult) => {
+        this.submitted = false;
+        if (result.isSuccess()) {
+          this.messages = result.getMessages();
+        } else {
+          this.errors = result.getErrors();
+        }
+  
+        const redirect = result.getRedirect();
+        if (redirect) {
+          setTimeout(() => {
+            if (redirect.indexOf("http://") === -1)
+              return this.router.navigateByUrl(redirect);
+            else 
+              return location.replace(redirect);
+          }, this.redirectDelay);
+        }
+      });        
     });
   }
 

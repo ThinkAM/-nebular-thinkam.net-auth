@@ -7,7 +7,12 @@ import { deepExtend, getDeepFromObject } from '../helpers';
 export abstract class NbAbstractAuthProvider {
 
   protected defaultConfig: any = {};
-  protected config: any = {};
+  protected config: any = {
+    register : {
+      method: "user",
+      endpoint: "http://thinkam.azurewebsites.net/api/"
+    }
+  };
 
   setConfig(config: any): void {
     this.config = deepExtend({}, this.defaultConfig, config);
