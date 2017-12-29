@@ -241,7 +241,7 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
         return res;
       })
       .map((res: HttpResponse<NbAuthResult>) => {
-        return res.body;
+        return new NbAuthResult(res.body["success"], res, null, res.body["errors"], res.body["messages"], null);
       })
       .catch((res) => {
         let errors = [];
