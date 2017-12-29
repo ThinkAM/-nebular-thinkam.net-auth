@@ -231,7 +231,7 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
 
   register(data?: any): Observable<NbAuthResult> {
     const method = this.getConfigValue('register.method');
-    const url = this.getActionEndpoint('register.endpoint');
+    const url = this.getActionEndpoint('register');
     return this.http.request(method, url, { body: data, observe: 'response' })
       .map((res) => {
         if (this.getConfigValue('register.alwaysFail')) {
