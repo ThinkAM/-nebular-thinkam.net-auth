@@ -102,7 +102,7 @@ import { NbEmailPassAuthProvider } from '../../providers/email-pass-auth.provide
           <small
             class="form-text error"
             *ngIf="rePass.touched && password.value != rePass.value && !rePass.errors?.required">
-            Password does not match the confirm password.
+            O campo senha não corresponde ao de confirmação de senha.
           </small>
         </div>
 
