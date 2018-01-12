@@ -120,6 +120,7 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
       redirect: {
         success: '/',
         failure: null,
+        enable: false
       },
       defaultErrors: ['Login/Email combination is not correct, please try again.'],
       defaultMessages: ['You have been successfully logged in.'],
@@ -132,6 +133,7 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
       redirect: {
         success: 'http://thinkam.net/beta',
         failure: null,
+        enable: false
       },
       defaultErrors: ['Alguma coisa deu errado. Por favor tente outra vez.'],
       defaultMessages: ['Você foi registrado com sucesso.'],
@@ -143,6 +145,7 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
       redirect: {
         success: '/',
         failure: null,
+        enable: false
       },
       defaultErrors: ['Something went wrong, please try again.'],
       defaultMessages: ['You have been successfully logged out.'],
@@ -153,6 +156,7 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
       redirect: {
         success: '/',
         failure: null,
+        enable: false
       },
       defaultErrors: ['Something went wrong, please try again.'],
       defaultMessages: ['Reset password instructions have been sent to your email.'],
@@ -163,6 +167,7 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
       redirect: {
         success: '/',
         failure: null,
+        enable: false
       },
       resetPasswordTokenKey: 'reset_password_token',
       defaultErrors: ['Something went wrong, please try again.'],
@@ -241,7 +246,7 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
         return res;
       })
       .map((res: HttpResponse<NbAuthResult>) => {
-        return new NbAuthResult(res.body["success"], res, "http://thinkam.net/beta/", res.body["errors"], res.body["messages"], null);
+        return new NbAuthResult(res.body["success"], res, "http://thinkam.net/beta/", res.body["errors"], res.body["messages"], null, false);
       })
       .catch((res) => {
         let errors = [];

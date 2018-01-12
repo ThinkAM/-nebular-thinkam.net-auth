@@ -26,7 +26,8 @@ export class NbAuthResult {
     protected redirect?: any,
     errors?: any,
     messages?: any,
-    token?: NbAuthSimpleToken) {
+    token?: NbAuthSimpleToken,
+    protected redirectEnable?: boolean) {
 
     this.errors = this.errors.concat([errors]);
     if (errors instanceof Array) {
@@ -55,6 +56,10 @@ export class NbAuthResult {
 
   getRedirect(): any {
     return this.redirect;
+  }
+
+  getRedirectEnable() : boolean {
+    return this.redirectEnable;
   }
 
   getErrors(): string[] {
