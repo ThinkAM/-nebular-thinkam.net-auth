@@ -58,7 +58,7 @@ import { NbEmailPassAuthProvider } from '../../providers/email-pass-auth.provide
                  class="form-control" placeholder="Informe o seu Endereço de E-mail" pattern=".+@.+\..+"
                  [class.form-control-danger]="email.invalid && email.touched"
                  [required]="getConfigValue('forms.validation.email.required')">
-          <small class="form-text error" *ngIf="email.invalid && email.touched && email.errors?.required">
+          <small class="form-text error" *ngIf="!result.isSuccess() && email.invalid && email.touched && email.errors?.required">
             E-mail é obrigatório!
           </small>
           <small class="form-text error"
@@ -75,7 +75,7 @@ import { NbEmailPassAuthProvider } from '../../providers/email-pass-auth.provide
                  [required]="getConfigValue('forms.validation.password.required')"
                  [minlength]="getConfigValue('forms.validation.password.minLength')"
                  [maxlength]="getConfigValue('forms.validation.password.maxLength')">
-          <small class="form-text error" *ngIf="password.invalid && password.touched && password.errors?.required">
+          <small class="form-text error" *ngIf="!result.isSuccess() && password.invalid && password.touched && password.errors?.required">
             Senha é obrigatória!
           </small>
           <small
@@ -96,7 +96,7 @@ import { NbEmailPassAuthProvider } from '../../providers/email-pass-auth.provide
             [class.form-control-danger]="(rePass.invalid || password.value != rePass.value) && rePass.touched"
             [required]="getConfigValue('forms.validation.password.required')">
           <small class="form-text error"
-                 *ngIf="rePass.invalid && rePass.touched && rePass.errors?.required">
+                 *ngIf="!result.isSuccess() && rePass.invalid && rePass.touched && rePass.errors?.required">
             Confirmação de Senha é Obrigatória!
           </small>
           <small
@@ -170,7 +170,7 @@ export class NbRegisterComponent {
               else 
                 return location.replace(redirect);
             } else {
-              this.user = {};
+              this.user = {};              
             }
           }, this.redirectDelay);
         }      
