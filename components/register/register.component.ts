@@ -164,11 +164,14 @@ export class NbRegisterComponent {
         
         if (result.isSuccess()) {
           setTimeout(() => {
-            if (redirectEnable)
+            if (redirectEnable){
               if (redirect.indeOf("http://") === -1)
                 return this.router.navigateByUrl(redirect);
               else 
                 return location.replace(redirect);
+            } else {
+              this.user = {};
+            }
           }, this.redirectDelay);
         }      
     });
