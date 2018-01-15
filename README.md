@@ -1,1 +1,1 @@
-### @nebular/auth module, more details https://akveo.github.io/nebular/
+# Módulo nebular-thinkam.net-auth, para mais detalhes: https://github.com/ThinkAM/ngx-admin
