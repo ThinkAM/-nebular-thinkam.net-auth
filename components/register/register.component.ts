@@ -56,7 +56,7 @@ import { NbEmailPassAuthProvider } from '../../providers/email-pass-auth.provide
           <label for="input-email" class="sr-only">Endereço de E-mail</label>
           <input name="email" [(ngModel)]="user.email" id="input-email" #email="ngModel"
                  class="form-control" placeholder="Informe o seu Endereço de E-mail" pattern=".+@.+\..+"
-                 [class.form-control-danger]="email.invalid && email.touched"
+                 [class.form-control-danger]="email.invalid && email.touched && !success"
                  [required]="getConfigValue('forms.validation.email.required')">
           <small class="form-text error" *ngIf="!success && email.invalid && email.touched && email.errors?.required">
             E-mail é obrigatório!
@@ -71,7 +71,7 @@ import { NbEmailPassAuthProvider } from '../../providers/email-pass-auth.provide
           <label for="input-password" class="sr-only">Senha</label>
           <input name="password" [(ngModel)]="user.password" type="password" id="input-password"
                  class="form-control" placeholder="Informe a sua Senha" #password="ngModel"
-                 [class.form-control-danger]="password.invalid && password.touched"
+                 [class.form-control-danger]="password.invalid && password.touched && !success"
                  [required]="getConfigValue('forms.validation.password.required')"
                  [minlength]="getConfigValue('forms.validation.password.minLength')"
                  [maxlength]="getConfigValue('forms.validation.password.maxLength')">
@@ -93,7 +93,7 @@ import { NbEmailPassAuthProvider } from '../../providers/email-pass-auth.provide
           <input
             name="rePass" [(ngModel)]="user.confirmPassword" type="password" id="input-re-password"
             class="form-control" placeholder="Confirme a sua Senha" #rePass="ngModel"
-            [class.form-control-danger]="(rePass.invalid || password.value != rePass.value) && rePass.touched"
+            [class.form-control-danger]="(rePass.invalid || password.value != rePass.value) && rePass.touched && !success"
             [required]="getConfigValue('forms.validation.password.required')">
           <small class="form-text error"
                  *ngIf="!success && rePass.invalid && rePass.touched && rePass.errors?.required">
